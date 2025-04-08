@@ -17,7 +17,6 @@
     --color-neutral-50: oklch(98.5% 0 0);
     --color-white: #fff;
     --spacing: 0.25rem;
-    --breakpoint-2xl: 96rem;
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
@@ -180,17 +179,17 @@
   .flex {
     display: flex;
   }
-  .table {
-    display: table;
+  .w-\[60\%\] {
+    width: 60%;
+  }
+  .w-\[70\%\] {
+    width: 70%;
+  }
+  .w-\[80\%\] {
+    width: 80%;
   }
   .w-full {
     width: 100%;
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -198,51 +197,23 @@
   .flex-row {
     flex-direction: row;
   }
-  .flex-row-reverse {
-    flex-direction: row-reverse;
-  }
   .items-center {
     align-items: center;
   }
   .justify-center {
     justify-content: center;
   }
-  .rounded {
-    border-radius: 0.25rem;
-  }
-  .rounded-full {
-    border-radius: calc(infinity * 1px);
-  }
   .rounded-md {
     border-radius: var(--radius-md);
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
-  .bg-neutral-50 {
-    background-color: var(--color-neutral-50);
-  }
-  .bg-pink-400 {
-    background-color: var(--color-pink-400);
-  }
   .bg-white {
     background-color: var(--color-white);
-  }
-  .bg-yellow-200 {
-    background-color: var(--color-yellow-200);
-  }
-  .bg-yellow-300 {
-    background-color: var(--color-yellow-300);
   }
   .bg-yellow-400 {
     background-color: var(--color-yellow-400);
   }
   .bg-yellow-500 {
     background-color: var(--color-yellow-500);
-  }
-  .bg-yellow-600 {
-    background-color: var(--color-yellow-600);
   }
   .p-3 {
     padding: calc(var(--spacing) * 3);
@@ -263,26 +234,9 @@
   .text-white {
     color: var(--color-white);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
-  .min-\[360px\]\:mt-2 {
-    @media (width >= 360px) {
-      margin-top: calc(var(--spacing) * 2);
-    }
-  }
   .min-\[360px\]\:mt-3 {
     @media (width >= 360px) {
       margin-top: calc(var(--spacing) * 3);
-    }
-  }
-  .min-\[360px\]\:mt-5 {
-    @media (width >= 360px) {
-      margin-top: calc(var(--spacing) * 5);
     }
   }
   .min-\[360px\]\:h-1\/2 {
@@ -290,46 +244,14 @@
       height: calc(1/2 * 100%);
     }
   }
-  .min-\[360px\]\:h-1\/4 {
-    @media (width >= 360px) {
-      height: calc(1/4 * 100%);
-    }
-  }
-  .min-\[360px\]\:h-\[10px\] {
-    @media (width >= 360px) {
-      height: 10px;
-    }
-  }
   .min-\[360px\]\:h-\[50px\] {
     @media (width >= 360px) {
       height: 50px;
     }
   }
-  .min-\[360px\]\:min-\[360px\]\:w-\[50px\] {
-    @media (width >= 360px) {
-      @media (width >= 360px) {
-        width: 50px;
-      }
-    }
-  }
-  .min-\[360px\]\:w-1 {
-    @media (width >= 360px) {
-      width: calc(var(--spacing) * 1);
-    }
-  }
   .min-\[360px\]\:w-1\/2 {
     @media (width >= 360px) {
       width: calc(1/2 * 100%);
-    }
-  }
-  .min-\[360px\]\:w-1\/4 {
-    @media (width >= 360px) {
-      width: calc(1/4 * 100%);
-    }
-  }
-  .min-\[360px\]\:w-\[10px\] {
-    @media (width >= 360px) {
-      width: 10px;
     }
   }
   .min-\[360px\]\:w-\[50px\] {
@@ -347,31 +269,6 @@
       width: 100%;
     }
   }
-  .min-\[360px\]\:max-w-1\/2 {
-    @media (width >= 360px) {
-      max-width: calc(1/2 * 100%);
-    }
-  }
-  .min-\[360px\]\:max-w-1\/4 {
-    @media (width >= 360px) {
-      max-width: calc(1/4 * 100%);
-    }
-  }
-  .min-\[360px\]\:max-w-\[85\%\] {
-    @media (width >= 360px) {
-      max-width: 85%;
-    }
-  }
-  .min-\[360px\]\:max-w-\[90\%\] {
-    @media (width >= 360px) {
-      max-width: 90%;
-    }
-  }
-  .min-\[360px\]\:bg-yellow-200 {
-    @media (width >= 360px) {
-      background-color: var(--color-yellow-200);
-    }
-  }
   .min-\[360px\]\:text-lg {
     @media (width >= 360px) {
       font-size: var(--text-lg);
@@ -385,26 +282,14 @@
     }
   }
 }
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-border-style: solid;
       --tw-font-weight: initial;
-      --tw-outline-style: solid;
     }
   }
 }
